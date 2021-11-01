@@ -27,6 +27,8 @@ describe("ELH Token contract", function () {
 
     // Nested subsections 
     describe("Deployment", function () {
+        console.log("Contract address %", elhContract.address);
+        
         it("Set the right owner", async function(){
             expect(await elhContract.owner()).to.equal(owner.address);
         });
@@ -34,7 +36,7 @@ describe("ELH Token contract", function () {
         it("Assign the total supply of tokens to the owner", async function () {
 
             const ownerBalance = await elhContract.balanceOf(owner.address);
-            console.log(`\tBalance of ${owner.address} ${ownerBalance} ETH`)
+            console.log(`\tBalance of ${owner.address} ${ownerBalance} ELH`)
 
             expect(await elhContract.totalSupply()).to.equal(ownerBalance);
         });
@@ -44,14 +46,13 @@ describe("ELH Token contract", function () {
 
     describe("Transactions", function () {
         it("Transfer tokens between accounts", async function () {
-            console.log("From", addr1.address, "to", addr2.address);
-
+            
             let amount = 10;
             // Transfer 50 tokens from owner to addr1
             await elhContract.transfer(addr1.address, amount);
             let bal = await elhContract.balanceOf(addr1.address);
             expect(bal).to.equal(amount);
-            console.log("Balance", bal, "ETH");
+            console.log("\nBalance", bal.toString(), elhContract.symbol);
 
             // Transfer 50 tokens from addr1 to addr2
             await elhContract.connect(addr1).transfer(addr2.address, amount);

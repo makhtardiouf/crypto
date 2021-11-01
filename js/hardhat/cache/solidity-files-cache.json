@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/makhtar/Documents/Code/crypto/js/hardhat/contracts/TokenElh.sol": {
-      "lastModificationDate": 1635768088244,
-      "contentHash": "aa9c5736f1f7909e1365d8568720d140",
+      "lastModificationDate": 1635774625995,
+      "contentHash": "844a566d0d2aab322bf29bed708493cd",
       "sourceName": "contracts/TokenElh.sol",
       "solcConfig": {
         "version": "0.8.8",

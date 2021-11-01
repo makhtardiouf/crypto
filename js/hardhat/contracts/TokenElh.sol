@@ -40,11 +40,13 @@ contract TokenElh {
      * the contract.
      */
     function transfer(address to, uint amount) external {
+        address from = msg.sender;
+        console.log("\tSending %s \n\tfrom %s \n\tto %s", amount, from, to);
 
-        require(balances[msg.sender] >= amount, "Balance is insufficient");
+        require(balances[from] >= amount, "Balance is insufficient");
 
         // Transfer
-        balances[msg.sender] -= amount;
+        balances[from] -= amount;
         balances[to] += amount;
         
         // Could simply use owner.transfer() ?
