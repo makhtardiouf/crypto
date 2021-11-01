@@ -27,7 +27,6 @@ describe("ELH Token contract", function () {
 
     // Nested subsections 
     describe("Deployment", function () {
-        console.log("Contract address %", elhContract.address);
         
         it("Set the right owner", async function(){
             expect(await elhContract.owner()).to.equal(owner.address);
