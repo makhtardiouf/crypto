@@ -3,7 +3,7 @@
  * ELH Smart Contract
  * Ref https://hardhat.org/tutorial/writing-and-compiling-contracts.html
 */
-pragma solidity ^0.8;
+pragma solidity >=0.8.9;
 //import "hardhat/console.sol";
 // Main building block for Smart Contract
 
