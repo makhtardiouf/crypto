@@ -18,7 +18,7 @@ tronbox compile
 export privateKey="25bed7ad-3925-40c7-bb9b-bb8ef00f3afa"
 
 # Deploy to testnet
-PK="25bed7ad-3925-40c7-bb9b-bb8ef00f3afa" source .env && tronbox migrate --reset --network shasta
+PK="f853ec40bd892b88e8f49921b1cd584fad6927df758dd84ce804f30330065ad1" source .env && tronbox migrate --reset --network shasta
 
 # Deploy to local Docker fullnode
 tronbox migrate --network development

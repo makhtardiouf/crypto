@@ -6,7 +6,6 @@ import random
 from web3.auto.gethdev import w3  # Autoconfiguration for local dev env
 
 """ from web3 import Web3  # This is for mainnet
-from web3.providers.ipc import IPCProvider
 from web3.providers.rpc import HTTPProvider
 from web3.providers.eth_tester.main import EthereumTesterProvider """
 
@@ -37,7 +36,8 @@ try:
     acc2 = ""
     accs = w3.eth.accounts
     if len(accs) < 2:
-        acc2 = w3.geth.personal.new_account("Anwaare")
+        
+        acc2 = w3.geth.personal.newAccount("Anwaare")
         print(f"Created new account {acc2}")
     else:
         acc2 = accs[1]

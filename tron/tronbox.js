@@ -22,7 +22,7 @@ module.exports = {
       network_id: '1'
     },
     shasta: {
-      privateKey: process.env.PRIVATE_KEY_SHASTA,
+      privateKey: "38bd85cfe293f074602abc264045215a7c19afbd6fe81b3c70269b3bd1ce8750",
       userFeePercentage: 50,
       feeLimit: 1000 * 1e6,
       fullHost: 'https://api.shasta.trongrid.io',
